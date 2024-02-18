@@ -1,17 +1,17 @@
 // Assignment Problem 1
 
-// for (i = 0; i <= 30; i++) {
-//   console.log(i);
-// }
+for (i = 0; i <= 30; i++) {
+  console.log(i);
+}
 
 //Assignment Problem 2
 
-// setTimeout(a, 1000);
-// console.time("label");
+setTimeout(a, 1000);
+console.time("label");
 
-// function a() {
-//   console.timeEnd("label");
-// }
+function a() {
+  console.timeEnd("label");
+}
 
 // Assignment  3
 
