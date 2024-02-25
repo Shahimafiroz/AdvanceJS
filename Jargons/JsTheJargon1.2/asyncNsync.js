@@ -24,4 +24,11 @@ fs.readFile("readme.txt", "utf-8", function (err, data) {
   console.log(data);
 });
 
-console.log("SHSHIMSNSNSNDHBDUWH");
+console.log("Hi there 1");
+
+let ans = 0;
+for (i = 0; i < 100000000; i++) {
+  ans += i;
+}
+
+console.log("Hi there 2");
