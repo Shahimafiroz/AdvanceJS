@@ -17,7 +17,7 @@ const fs = require("fs");
 
 // The timmy goes on to do his own Shit (if free goes back to take ketchup from simmy)
 
-//********************************************************************************************************************************************************
+//********************************************************************************************************************************************************//
 
 //2. PROMISE -the reason to introduce promise is to get rid of callbacks---> to avoid callback hell !
 
