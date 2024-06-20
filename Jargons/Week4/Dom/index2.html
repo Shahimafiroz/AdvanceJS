@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<script>
+ let globalId = 1;
+
+ function markAsDone(todoId) {
+      const parent = document.getElementById(todoId);
+      parent.children[2].innerHTML = "Done!"
+      const title = parent.children[1];
+      const des = parent.children[0];
+      const t = title.textContent;
+      const d  = des.textContent;
+      title.innerHTML = "<s>"+t+"</s>";
+      des.innerHTML = "<s>"+d+"</s>";
+    }
+
+function createChild(title , description , Id){
+    const child = document.createElement("div");
+    const firstGrandChild = document.createElement("div");
+    firstGrandChild.innerHTML = title;
+    const secondGrandChild = document.createElement("div");
+    secondGrandChild.innerHTML = description;
+    const thirdGrandChild = document.createElement("button");
+    thirdGrandChild.innerHTML = "Mark as Done";
+    thirdGrandChild.setAttribute("onclick", `markAsDone(${Id})`);
+    child.appendChild(firstGrandChild);
+    child.appendChild(secondGrandChild);
+    child.appendChild(thirdGrandChild);
+    child.setAttribute("Id" , Id);
+    return child;
+}
+    
+function addTodo(){
+    const title  = document.getElementById("title").value;
+    const description = document.getElementById("description").value;
+    const outerDiv = document.createElement("div"); //<div></div>
+    outerDiv.innerHTML = title;
+    const parent = document.getElementById("container")
+    parent.appendChild(createChild(title , description , globalId ++));
+    // document.getElementById("container").innerHTML = original + `
+    // <div>
+    //   <div>${title}</div>
+    //   <div>${description}</div>
+    //   <button> Mark As Done </button><br>
+    // </div>
+    // `
+}
+</script>
+
+  <body>
+    <div>
+      <br /><br />
+      <input id ="title"type="text" placeholder="title" />
+      <br /><br />
+      <input id="description" type="text" placeholder="description" />
+      <br /><br />
+      <button onclick="addTodo()">Add todo</button>
+      <br /><br />
+    </div>
+    <div id="container">
+   
+    </div>
+  </body>
+</html>
