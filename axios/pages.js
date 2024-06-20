@@ -11,17 +11,29 @@ import axios from "axios";
 
 // window.getUserPosts = getUserPosts;
 // async function for getting posts
+document.getElementById(posts).addEventListener(onclick(), getUserPosts());
+
 async function getUserPosts() {
   try {
-    const userPosts = await axios("https://jsonplaceholder.typicode.com/posts");
-    console.log(userPosts);
-    const IdAndPost = await userPosts.map((user) =>
-      console.log(user.id, user.body)
-    );
-    console.log(IdAndPost);
+    const res = await axios({
+      method: "GET",
+      url: "https://jsonplaceholder.typicode.com/posts",
+    });
+    const users = res.data;
+    // console.log(users);
+    const postsAndId = users.map((obj) => {
+      return { id: obj.id, body: obj.body };
+    });
+
+    console.log(postsAndId);
+    return postsAndId;
   } catch (error) {
-    console.log(error);
+    console.log(error.confg);
   }
 }
+
+// Attach the getUserPosts function to the window object to make it global
+window.getUserPosts = getUserPosts;
+
 // calling the function
-getUserPosts();
+// getUserPosts();
