@@ -1,0 +1,34 @@
+ Try to solve using map only
+ 1. Write a function that takes an array of numbers and returns an array where each number is squared.
+ 2. Write a function that takes an array of strings and returns a new array with all strings converted to uppercase.
+ 3. Write a function that takes an array of strings and returns an array containing the lengths of those strings.
+ 4. Write a function that takes an array of numbers and returns an array where each number is increased by its index in the array.
+ 5. Write a function that takes an array of numbers and returns an array with all values doubled.
+ 
+ 
+
+ Try to solve using filter only
+ 1. Given an array of numbers, return a new array that has only the numbers that are 5 or greater.
+ 2. Given an array of numbers, return a new array that only includes the even numbers.
+ 3. Given an array of strings, return a new array that only includes those that are 5 characters or fewer in length
+ 4.  Make a filtered list of all the people whose age is greater than 18.
+	[
+		{ name: "Angelina Jolie", age: 80 },
+		{ name: "Eric Jones", age: 2 },
+		{ name: "Paris Hilton", age: 5 },
+		{ name: "Kayne West", age: 16 },
+		{ name: "Bob Ziroll", age: 100 }
+	]
+ 5. Write a function that takes an array of numbers and returns a new array with only the numbers that are greater than 10.
+ 
+
+ Try to solve using reduce only
+ 1. Write a function that takes an array of numbers and returns the sum of all the numbers.
+ 2. Write a function that takes an array of numbers and returns the product of all the numbers.
+ 3. Write a function that takes an array of numbers and returns the average of those numbers.
+
+
+
+
+
+ https://jsonplaceholder.typicode.com/todos
